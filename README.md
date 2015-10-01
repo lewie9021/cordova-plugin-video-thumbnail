@@ -1,6 +1,6 @@
 # cordova-plugin-video-thumbnail
 
-Provides support for rendering video thumbnails within Cordova.
+Provides support for rendering video thumbnails on Android using Cordova.
 
 ## Motivation
 
@@ -11,10 +11,6 @@ After searching the Web for a video thumbnail plugin, I couldn't seem to find on
 ```
 $ cordova plugin add https://github.com/lewie9021/cordova-plugin-video-thumbnail.git
 ```
-
-## Supported Platforms
-
-- Android
 
 ### Parameters
 
