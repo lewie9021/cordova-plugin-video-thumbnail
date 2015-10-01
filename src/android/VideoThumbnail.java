@@ -18,7 +18,7 @@
  * OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
  * OTHER DEALINGS IN THE SOFTWARE.
  */
-package com.Lewie9021.videothumbnail;
+package com.lewie9021.videothumbnail;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
@@ -42,10 +42,10 @@ public class VideoThumbnail extends CordovaPlugin {
 
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         try {
-            if (action.equals("createThumbnail")) { // Action is 'createThumbnail'
+            // Action is 'create'
+            if (action.equals("create")) {
                 Uri fileURI = Uri.fromFile(new File(args.getString(0)));
                 String filePath = args.getString(0).replace(fileURI.getScheme() + ":", "");
-
                 Bitmap thumbnail = ThumbnailUtils.createVideoThumbnail(filePath, Thumbnails.MINI_KIND);
 
                 callbackContext.success(encodeTobase64(thumbnail));

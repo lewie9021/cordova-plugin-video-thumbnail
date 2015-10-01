@@ -1,5 +1,5 @@
 /**
- * video-thumbnail
+ * cordova-plugin-video-thumbnail
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of this
  * software and associated documentation files (the "Software"), to deal in the Software
@@ -19,10 +19,12 @@
  * OTHER DEALINGS IN THE SOFTWARE.
 **/
 
-VideoThumbnail = function() {}
+var Exec = require("cordova/exec");
 
-VideoThumbnail.prototype.createThumbnail = function(source, success, failure) {
-	cordova.exec(success, failure, "VideoThumbnail", "createThumbnail", [source]);
+function createThumbnail(filePath, callback) {
+    var success = callback.bind(callback, null);
+    
+    Exec(success, callback, "VideoThumbnail", "create", [filePath]);
 }
 
-module.exports = new VideoThumbnail();
+module.exports = createThumbnail;

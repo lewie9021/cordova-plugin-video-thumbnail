@@ -1,36 +1,38 @@
-# com.Lewie9021.video-thumbnail
+# cordova-plugin-video-thumbnail
 
-This plugin provides support for rendering video thumbnails within Cordova, After looking around the web for a video thumbnail plugin, I couldn't seem to find a plugin that worked 'out the box'. I decided I would create one myself that unlike some of the similar plugins, generates a base64 encoded string that can be used via an image element or via CSS styling with a background url property.
+Provides support for rendering video thumbnails within Cordova.
+
+## Motivation
+
+After searching the Web for a video thumbnail plugin, I couldn't seem to find one that worked 'out the box'. I decided I would create my own that generates a base64 encoded string. Using the src attribute of an image element, thumbnails can be easily be rendered on the screen to the user. Alternatively, you may use the CSS rule 'background' to produce a similar result.
 
 ## Installation
 
-	cordova plugin add https://github.com/Lewie9021/video-thumbnail.git
+```
+$ cordova plugin add https://github.com/lewie9021/cordova-plugin-video-thumbnail.git
+```
 
 ## Supported Platforms
 
 - Android
 
-## createThumbnail
-
-	navigator.videoThumbnail.createThumbnail(source, success, failure);
-
 ### Parameters
 
 <dl>
-	<dt>source</dt>
-	<dd>Path to the video file. Example: </dd>
+    <dt>fileURI</dt>
+    <dd>Path to the video in the device</dd>
 
-	<dt>success(imageData)</dt>
-	<dd>Successful callback. This function will be fired when the thumbnail has been created without any errors.</dd>
-
-	<dt>failure(err)</dt>
-	<dd>Fail callback. This function will be fired if there are any errors that have occured during the creation of the thumbnail.</dd>
+    <dt>callback(err, imageData)</dt>
+    <dd>This function will be fired when the plugin has finished process. If an error has occurred 'err' will be populated, otherwise, it will be null and imageData will contain a base64 string.</dd>
 </dl>
 
 ### Example
 
-	navigator.videoThumbnail.createThumbnail(fileURI, function(imageData) {
-		console.log(imageData); //Will display the base64 encoded string in console.
-	}, function(err) {
-		alert("Error: " + err); //Fire an alert if any errors occur.
-	});
+```js
+navigator.createThumbnail(fileURI, function(err, imageData) {
+    if (err)
+        throw err;
+    
+    console.log(imageData); // Will log the base64 encoded string in console.
+});
+```
