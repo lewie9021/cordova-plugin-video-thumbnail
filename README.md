@@ -9,17 +9,17 @@ After searching the Web for a video thumbnail plugin, I couldn't seem to find on
 ## Installation
 
 ```
-$ cordova plugin add https://github.com/lewie9021/cordova-plugin-video-thumbnail.git
+$ cordova plugin add cordova-plugin-video-thumbnail
 ```
 
 ### Parameters
 
 <dl>
     <dt>fileURI</dt>
-    <dd>Path to the video in the device</dd>
+    <dd>Path to video on the device</dd>
 
     <dt>callback(err, imageData)</dt>
-    <dd>This function will be fired when the plugin has finished process. If an error has occurred 'err' will be populated, otherwise, it will be null and imageData will contain a base64 string.</dd>
+    <dd>This function will be fired when the plugin has finished processing. If an error has occurred 'err' will be populated, otherwise, it will be null and imageData will contain a base64 string.</dd>
 </dl>
 
 ### Example

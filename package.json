@@ -1,0 +1,28 @@
+{
+  "name": "cordova-plugin-video-thumbnail",
+  "version": "2.0.0",
+  "description": "Create video thumbnails from video file paths on Android.",
+  "cordova": {
+    "id": "cordova-plugin-video-thumbnail",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lewie9021/cordova-plugin-video-thumbnail"
+  },
+  "keywords": [
+    "cordova",
+    "video",
+    "thumbnail",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Lewis Barnes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lewie9021/cordova-plugin-video-thumbnail/issues"
+  },
+  "homepage": "https://github.com/lewie9021/cordova-plugin-video-thumbnail#readme"
+}
