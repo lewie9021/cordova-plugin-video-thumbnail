@@ -4,7 +4,7 @@
         id="cordova-plugin-video-thumbnail"
         version="1.0.0">
     <engines>
-        <engine name="cordova" version=">=5.0.0" />
+        <engine name="cordova" version=">=4.0.0" />
     </engines>
     <name>Video Thumbnail</name>
     <description>Create video thumbnails from video file paths on Android</description>
