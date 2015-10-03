@@ -12,17 +12,17 @@ After searching the Web for a video thumbnail plugin, I couldn't seem to find on
 $ cordova plugin add cordova-plugin-video-thumbnail
 ```
 
-### Parameters
+## Parameters
 
-<dl>
-    <dt>fileURI</dt>
-    <dd>Path to video on the device</dd>
+**fileURI**
 
-    <dt>callback(err, imageData)</dt>
-    <dd>This function will be fired when the plugin has finished processing. If an error has occurred 'err' will be populated, otherwise, it will be null and imageData will contain a base64 string.</dd>
-</dl>
+Path to video on the device
 
-### Example
+**callback(err, imageData)**
+
+This function will be fired when the plugin has finished processing. If an error has occurred 'err' will be populated, otherwise, it will be null and imageData will contain a base64 string.
+
+## Example
 
 ```js
 navigator.createThumbnail(fileURI, function(err, imageData) {
