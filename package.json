@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-video-thumbnail",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Create video thumbnails from video file paths on Android.",
   "cordova": {
     "id": "cordova-plugin-video-thumbnail",
